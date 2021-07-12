@@ -1,24 +1,33 @@
 import logo from './logo.svg';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
+import NavBar from './components/NavBar';
+import ItemListContainer from './components/ItemListContainer';
+import CartWidget from './components/CartWidget';
+
+//EJECUTAR HOLA APP
+const HolaApp=() =>{
+  return (
+  <p>Hola, Cristel</p>
+  )
+}
 
 function App() {
+  let nombre = 'cris'
+  // ACA VA EL JS
+  const style = {backgroundColor: 'blue', color:"white"}
+  const saludar =()=>{
+    alert('hola!')
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <h1>Cristel Tapia</h1>
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App" style={{backgroundColor: 'blue',color: 'white'}}>
+        <NavBar/>
+        <HolaApp/>
+
+        <ItemListContainer greeting='Hola soy Cris...'/>
+        <button onClick={saludar}>Clic aquí</button>
+        <CartWidget/> 
     </div>
   );
 }
