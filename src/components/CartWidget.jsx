@@ -1,9 +1,11 @@
 import React from 'react'
+import carrito from './shopping-cart.svg'
+import './CartWidget.css'
 
-function CartWidget(){
+const CartWidget =() => {
     return (
         <div>
-            <icon> </icon>
+            <img src={carrito} alt="cart" className="CartWidget"></img>
         </div>
     )
 }

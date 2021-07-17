@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import NavBar from './components/NavBar';
@@ -25,9 +25,9 @@ function App() {
         <NavBar/>
         <HolaApp/>
 
-        <ItemListContainer greeting='Hola soy Cris...'/>
+        <ItemListContainer greeting='Hola soy Cris...' user='Cris'/>
         <button onClick={saludar}>Clic aquí</button>
-        <CartWidget/> 
+        
     </div>
   );
 }
