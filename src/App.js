@@ -1,34 +1,42 @@
 
+import {useState, useEffect} from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import NavBar from './components/NavBar';
 import ItemListContainer from './components/ItemListContainer';
-import CartWidget from './components/CartWidget';
+import ItemCount from './components/ItemCount';
+//import CartWidget from './components/CartWidget';
 
-//EJECUTAR HOLA APP
-const HolaApp=() =>{
-  return (
-  <p>Hola, Cristel</p>
-  )
+
+
+//PROPS
+const SuperForm=({coder, state}) =>{
+  return <h1>{state}</h1>
 }
 
+
 function App() {
-  let nombre = 'cris'
-  // ACA VA EL JS
-  const style = {backgroundColor: 'blue', color:"white"}
   const saludar =()=>{
     alert('hola!')
   }
+  const [contador, setContador] =useState(0)
+  const [fecha, setFecha] = useState(null)
+  
+  function handleCount(){
+      setContador(contador + 1)
+      let date= Date ()
+      setFecha(date)
+  }
 
   return (
-    <div className="App" style={{backgroundColor: 'blue',color: 'white'}}>
-        <NavBar/>
-        <HolaApp/>
-
-        <ItemListContainer greeting='Hola soy Cris...' user='Cris'/>
-        <button onClick={saludar}>Clic aquí</button>
+    <div className="App" style={{backgroundColor: 'whitesmoke'}}>
         
-    </div>
+        <NavBar/>
+        {contador}<br/>
+        {fecha}
+        <ItemListContainer/>
+
+        <button onClick={saludar}>Clic aquí</button>    </div>
   );
 }
 

@@ -1,11 +1,16 @@
 import React from 'react'
-import './ItemListContainer.css'
-const ItemListContainer = ({greeting,user}) => {
+import ItemCount from './ItemCount'
+
+const handleCount=(cant)=>{
+    alert(`Has agregado : ${cant} productos al carrito`)
+}
+
+function ItemListContainer () {
     return (
-        <div className='banner'>
-            <h1 className='greeting'>{greeting}</h1>
-            <h2 className='user'>{user}</h2>
+        <div>
+            <ItemCount stock={5} initial={1} onAdd={handleCount}/>
         </div>
     )
 }
+
 export default ItemListContainer

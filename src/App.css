@@ -7,6 +7,14 @@
   pointer-events: none;
 }
 
+/*CARD*/
+.w-50{
+  width: 30% !important;
+}
+.card{
+  display: inline-block;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -21,7 +29,6 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
 }
 
 .App-link {
